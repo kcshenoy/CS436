@@ -12,7 +12,7 @@ where:
 - `n_port`: integer representing negotiation port where TCP server is listening
 - `req_code`: integer representing the request code for the server. If it matches the client's `req_code`, the server sends the UDP `r_port` the server will accept the `msg` on.
 
-After the server has started, switch to your client machine allow executable permissions for the client script as well:
+After the server has started, switch to your client machine and allow executable permissions for the client script as well:
 ```
 chmod +x ./client.sh
 ./client.sh <addr> <n_port> <req_code> <msg>
