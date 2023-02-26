@@ -3,11 +3,7 @@
 This file contains instructions on how to run a 2-stage TCP and UDP socket program in a client-server env. The first stage involves negotiation between the client and server through a TCP connection, where the client sends a `req_code`, and if it matches the `req_code` on the server side, the client receives `r_port` where the server is listening using UDP for the input string to be reversed, and closes their connection. The client creates a UDP socket to the server in `r_port` and sends `msg` to be reversed.
 
 ## Instructions:
-Firstly, navigate into the assignment folder to access the source files 
-```
-cd coding_a1
-```
-Then, to run our scripts directly, we need to allow executable permissions, starting with the server:
+To run our scripts directly, we need to allow executable permissions, starting with the server:
 ```
 chmod +x ./server.sh
 ./server.sh <n_port> <req_code>
@@ -16,9 +12,8 @@ where:
 - `n_port`: integer representing negotiation port where TCP server is listening
 - `req_code`: integer representing the request code for the server. If it matches the client's `req_code`, the server sends the UDP `r_port` the server will accept the `msg` on.
 
-After the server has started, switch to your client machine and navigate into the assignment folder to allow executable permissions for the client script as well:
+After the server has started, switch to your client machine allow executable permissions for the client script as well:
 ```
-cd coding_a1
 chmod +x ./client.sh
 ./client.sh <addr> <n_port> <req_code> <msg>
 ```
